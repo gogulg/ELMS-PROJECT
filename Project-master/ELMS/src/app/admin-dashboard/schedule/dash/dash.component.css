@@ -1,0 +1,60 @@
+.mar{
+  color: aliceblue;
+  font-weight: bold;
+
+  font-family: 'Times New Roman', Times, serif;
+}
+.day{
+text-align: center
+;font-family:'Times New Roman', Times, serif;font-weight: bold; color: rgb(255, 255, 255); font-size: 30px;
+}
+.oval1 {
+  height: 40px;
+  width: 200px;
+  background-image: linear-gradient(to right, rgb(48, 245, 74) , rgb(46, 78, 255));
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  padding: 3px;
+
+ font-family: 'Times New Roman', Times, serif;
+ font-weight: bold;
+
+}
+
+.oval2 {
+  height: 40px;
+  width: 200px;
+background-color: rgb(173, 185, 185);
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  padding: 3px;
+  color: rgb(15, 15, 134);
+ font-family: 'Times New Roman', Times, serif;
+ font-weight: bold;
+
+}
+
+.oval2:hover{
+  background-image: linear-gradient(to right, rgb(48, 245, 74) , rgb(46, 78, 255));
+  color: rgb(255, 255, 255);
+}
+
+
+.full{
+    margin-left: 300px;
+}
+.class{
+  font-family: 'Times New Roman', Times, serif, Times, serif;
+  font-weight: bold;
+  font-size: large;
+
+}
+.head{
+  font-family: 'Times New Roman', Times, serif;
+text-align: center;
+background-color: #54a82c;
+color: aliceblue;
+font-weight: bold;
+}

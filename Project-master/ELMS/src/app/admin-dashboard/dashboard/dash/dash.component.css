@@ -1,0 +1,65 @@
+.card{
+  position: relative;
+  margin-top: 40px;
+  width: 900px;
+  height: fit-content;
+  background: linear-gradient(to top left, #9dffa5 0%, #fffebf 100%);
+  border: black;
+  border-radius: 5%;
+  display:flex;
+  margin-left: 150px;
+  
+}
+img{
+  margin-top: 35px;
+  margin-left: 35px;
+  margin-right: 20px ;
+  height: 200px;
+  width: 180px;
+  border: 3px solid black;
+  border-radius: 10%;
+
+}
+
+.name{
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#img1{
+  border-color: black;
+  border: 20px;
+
+}
+
+#details{
+  margin-left: 35px;
+  margin-top: 20px;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#det{
+  margin-left: 35px;
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+
+
+}
+.a{
+  font-weight: bold;
+  font-size: 30px;
+font-family: 'Times New Roman', Times, serif;
+
+}
+.profile{
+font-family: 'Times New Roman', Times, serif;
+text-align: center;
+background-color: #54a82c;
+color: aliceblue;
+font-weight: bold;
+
+}

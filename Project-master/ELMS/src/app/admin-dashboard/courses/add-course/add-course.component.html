@@ -1,0 +1,138 @@
+<div class="card">
+  <div class="card-header cardheadbg text-center">
+    <h3><strong>Add New Course</strong></h3>
+  </div>
+
+  <div class="card-body">
+    <form
+      [formGroup]="courseDetails"
+      (ngSubmit)="getcourseDetails(courseDetails.value)"
+    >
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="form-group mt-3">
+            <label class="required-field">Course ID</label>
+            <input
+              type="text"
+              name="course_id"
+              class="form-control"
+              placeholder="enter a course id"
+              formControlName="course_id"
+            />
+            <div
+              *ngIf="
+                courseDetails.get('course_id').invalid &&
+                courseDetails.get('course_id').touched
+              "
+            >
+              <div *ngIf="courseDetails.get('course_id').errors.required">
+                <span class="errormsg">course id is required</span>
+              </div>
+              <div *ngIf="courseDetails.get('course_id').errors.pattern">
+                <span class="errormsg">
+                  only uppercase and numbers are allowed and minimum 5
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="form-group mt-3">
+            <label class="required-field">Course Title</label>
+            <input
+              type="text"
+              name="course_title"
+              class="form-control"
+              placeholder="enter a course title"
+              formControlName="course_title"
+            />
+            <div
+              *ngIf="
+                courseDetails.get('course_title').invalid &&
+                courseDetails.get('course_title').touched
+              "
+            >
+              <div *ngIf="courseDetails.get('course_title').errors.required">
+                <span class="errormsg">course title is required</span>
+              </div>
+              <div *ngIf="courseDetails.get('course_title').errors.pattern">
+                <span class="errormsg">
+                  only uppercase,lowercase and space is allowed and minimum 3
+                  characters
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="form-group mt-3">
+            <label class="required-field">Course Category</label>
+            <select
+            class="form-select form-select-md mb-3"
+            name="course_category"
+            formControlName="course_category"
+          >
+            <option value="" selected disabled>select a course category</option>
+            <option *ngFor="let crl of categoriesArrayList" [value]="crl.catid">
+              {{ crl.catname }}
+            </option>
+          </select>
+            <div
+              *ngIf="
+                courseDetails.get('course_category').invalid &&
+                courseDetails.get('course_category').touched
+              "
+            >
+              <div *ngIf="courseDetails.get('course_category').errors.required">
+                <span class="errormsg">course category is required</span>
+              </div>
+              <div *ngIf="courseDetails.get('course_category').errors.pattern">
+                <span class="errormsg">
+                  only uppercase and numbers are allowed and minimum 5
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="form-group mt-3">
+            <label class="required-field">Course Price</label>
+            <input
+              type="text"
+              name="course_price"
+              class="form-control"
+              placeholder="enter a course price"
+              formControlName="course_price"
+            />
+            <div
+              *ngIf="
+                courseDetails.get('course_price').invalid &&
+                courseDetails.get('course_price').touched
+              "
+            >
+              <div *ngIf="courseDetails.get('course_price').errors.required">
+                <span class="errormsg">course price is required</span>
+              </div>
+              <div *ngIf="courseDetails.get('course_price').errors.pattern">
+                <span class="errormsg"> only numeric values are allowed </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 float-end">
+        <button
+          type="submit"
+          class="btn btn-success btn-lg mb-2"
+          [disabled]="courseDetails.invalid"
+        >
+          <i class="fa fa-plus" aria-hidden="true"></i> Add Course
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

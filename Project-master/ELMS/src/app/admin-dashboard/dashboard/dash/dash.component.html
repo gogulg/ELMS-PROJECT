@@ -1,0 +1,78 @@
+<h2 class="profile">MY PROFILE</h2>
+
+    <div class="container">
+
+   
+  
+    
+    
+   
+    
+    <div class="card">
+
+
+      <div class="row">
+        <div id="img1" class="col-4">
+    
+          <img src="../../../../assets/images/user.jpeg  "alt="planner">
+        </div>
+        <div class="col-6">
+          <br>
+          <br>
+          <br>
+    
+          <div *ngFor = "let teach of teachList" class="name">
+            {{teach.name}}<br>
+          
+          </div>
+        <p class="a" *ngFor = "let teach of teachList" >{{teach.designation}}</p>
+        </div>
+    
+    
+    
+      </div>
+    
+    
+      <div  class="row">
+        <div id="details" class="col-5">
+    
+          <label>ID</label><br>
+          <label>DEPARTMENT</label><BR>
+          <label>D.O.B</label><BR>
+          <label>CITY</label><BR>
+          <label>PERSONAL ID</label><BR>
+          <label>CONTACT</label><BR>
+    
+        </div>
+    <div id="det" *ngFor = "let teach of teachList" class="col-5">
+    
+    
+    
+      {{teach.t_id}}<br>
+      {{teach.department}}<br>
+      {{teach.dob}}<br>
+      {{teach.city}}<br>
+      {{teach.p_id}}<br>
+      {{teach.contact}}<br>
+      <BR>
+        
+    
+    </div>
+    
+    
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>

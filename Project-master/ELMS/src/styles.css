@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e7e8ea !important;
+}
+.required-field::after {
+  content: "*";
+  color: red;
+  margin-left: 2px;
+}
+.errormsg {
+  color: red;
+}
+.ng-dirty.ng-invalid {
+  border-color: red !important;
+}
+.ng-dirty.ng-valid {
+  border-color: green !important;
+}
+.ng-untouched.ng-invalid {
+  border-color: 
+#78ba58 !important;
+}
+.ng-untouched.ng-valid {
+  border-color: 
+#78ba58!important;
+}
+.ng-pristine.ng-valid{
+    border-color: 
+#78ba58 !important;
+}
+.ng-pristine {
+ border-color: red !important;
+}
+.modal-header {
+  background-color: 
+#78ba58;
+  color: bisque;
+}
+.modal-body {
+  background-color: bisque;
+  color: 
+#78ba58;
+  font-size: 1.2rem;
+  font-weight: 600;
+}

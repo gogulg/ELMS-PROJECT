@@ -1,0 +1,30 @@
+.imgs {
+  height: 5.3rem;
+}
+.icon {
+  stroke: bisque;
+}
+.header {
+  background-color: #fff;
+  padding: 0rem 0.rem;
+  display: flex;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  border-bottom: 1px solid 
+#78ba58;
+}
+.head_title,
+.head_name {
+  color: 
+green;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1.4;
+  text-align: center;
+}
+.head_name {
+  font-size: 1.2rem;
+  color: 
+green;
+}

@@ -1,0 +1,2 @@
+mongodb+srv://teja123:<password>@cluster0.clkh2.mongodb.net/test
+mongodb+srv://teja123:Teja123@cluster0.clkh2.mongodb.net/test

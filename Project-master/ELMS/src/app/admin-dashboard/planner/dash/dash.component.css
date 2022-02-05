@@ -1,0 +1,40 @@
+.card{
+    width: 100%;
+
+
+}
+
+.card-body{
+    background: gray;
+}
+.thead{
+    background-image: linear-gradient(rgb(166, 255, 160), rgb(232, 255, 151));
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px;
+    text-transform: uppercase;
+    color:rgb(0, 0, 0);
+    height: 50px;
+    padding: 20px;
+    
+    
+    }
+.tbody{
+    background: linear-gradient(to bottom, #ffffff 0%, #a1ff94 100%);
+    color: rgb(0, 0, 0);
+   
+
+
+
+}
+
+.pro{
+    text-align: center;
+text-transform: uppercase;
+font-size: 30px;
+font-family: 'Times New Roman', Times, serif;
+text-align: center;
+background-color: #54a82c;
+color: aliceblue;
+font-weight: bold;
+
+}

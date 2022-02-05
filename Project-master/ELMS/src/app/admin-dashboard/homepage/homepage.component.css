@@ -1,0 +1,21 @@
+.my-container {
+  transition: 0.4s;
+  margin: 5px;
+  overflow-x: hidden;
+  position: sticky;
+  top: 0;
+}
+
+.active-cont {
+  margin-left: 252px;
+}
+.my-container input {
+  border-radius: 2rem;
+  padding: 2px 20px;
+}
+
+@media (max-width: 768px) {
+  .active-cont {
+    margin-left: 0px;
+  }
+}

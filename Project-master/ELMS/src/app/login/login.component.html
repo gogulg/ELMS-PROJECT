@@ -1,0 +1,111 @@
+<div class="box">
+  <div class="container">
+    <div class="card shadow-lg">
+      <div class="card-body">
+        <div class="row">
+          <div
+            class="
+              col-md-5
+              mb-3
+              d-flex
+              align-items-center
+              justify-content-center
+            "
+          >
+            <img
+              [src]="imgLogo"
+              [alt]="imgLogoName"
+              class="img-fluid imgs"
+            />
+          </div>
+
+          <div class="col-md-7">
+            <div class="card shadow rounded">
+              <h3 class="mb-4 text-center">Sign In</h3>
+              <form [formGroup]="userLogData" (ngSubmit)="logInCheck(userLogData.value)">
+                
+                <div class="form-group mb-3">
+                  <label for="roles" class="required-field"
+                    >Select user type</label
+                  >
+                  <select id="roles" formControlName="role" name="role" class="form-control">
+                    <option value="" disabled selected>choose user type</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Student">Student</option>
+                  </select>
+                  <div
+                    *ngIf="
+                      userLogData.get('role').invalid &&
+                      userLogData.get('role').touched
+                    "
+                  >
+                    <div *ngIf="userLogData.get('role').errors.required">
+                      <span class="errormsg">user type is required</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group mb-3">
+                  <label for="email" class="required-field">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="enter your email address"
+                    class="form-control"
+                    [(ngModel)]="usersEmail"
+                    formControlName="userEmail"
+                  />
+                  <div
+                    *ngIf="
+                      userLogData.get('userEmail').invalid &&
+                      userLogData.get('userEmail').touched
+                    "
+                  >
+                    <div *ngIf="userLogData.get('userEmail').errors.required">
+                      <span class="errormsg">email address is required</span>
+                    </div>
+                    <div *ngIf="userLogData.get('userEmail').errors.pattern">
+                      <span class="errormsg">enter a valid email address</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group mb-4">
+                  <label for="password" class="required-field">Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="enter your password"
+                    class="form-control"
+                    [(ngModel)]="usersPass"
+                    formControlName="userPwd"
+                  />
+                  <div
+                    *ngIf="
+                      userLogData.get('userPwd').invalid &&
+                      userLogData.get('userPwd').touched
+                    "
+                  >
+                    <div *ngIf="userLogData.get('userPwd').errors.required">
+                      <span class="errormsg">Password is required</span>
+                    </div>
+                    <div *ngIf="userLogData.get('userPwd').errors.pattern">
+                      <span class="errormsg"
+                        >passwords must have at least 1 uppercase letter,
+                        lowercase letter,number,special character & min 6
+                        characters</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="bt">
+                  <button class="btn btn-blue" type="submit">Login</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

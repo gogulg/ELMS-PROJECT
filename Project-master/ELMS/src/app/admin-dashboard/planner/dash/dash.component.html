@@ -1,0 +1,60 @@
+<h3 class="pro">PLANNER</h3>
+<br>
+<div class="card">
+  <div class="col-sm-8">
+    <input type="text" style="position: relative; " name="term" placeholder="Search" [(ngModel)]="term" >
+  
+   </div>
+   <br>
+  <table class="table ">
+
+     <thead class="thead">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Subject</th>
+          <th scope="col">Code</th>
+          <th scope="col">Date</th>
+          <th scope="col">Time</th>
+          <th scope="col">Duration</th>
+          <th scope="col" >Action</th>
+
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        
+        
+        <tr *ngFor="let time of plannerList | filter:term | paginate: { itemsPerPage: 3, currentPage: p } ">
+             
+              <td>{{time.id}}</td>
+              <td>{{time.subname}}</td>
+              <td>{{time.subcode}}</td>
+              <td>{{time.sdate}}</td>
+              <td>{{time.stime}}</td>
+              <td>{{time.sduration}}</td>
+               <td><button type="button" class="btn btn-warning"    [routerLink]="['edit', time._id]"    ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+               <button type="button" class="btn btn-danger" (click)="deleteData(time._id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+          </tr>
+       
+      </tbody>
+    </table>
+    <pagination-controls style="float:right;" (pageChange)="p = $event"></pagination-controls>
+    <button type="button" class="btn btn-primary" routerLink="add" >Add</button>
+
+  
+
+
+
+
+
+
+
+  </div>
+
+
+  
+
+
+
+
+
+

@@ -1,0 +1,130 @@
+<h2></h2>
+
+<div class="card" style="width: 25rem; padding: 23px;">
+    <br>
+    <form #frmData="ngForm" (ngSubmit)="sendData(frmData.value)">
+       
+       <div class="formgroup">
+
+            
+            <div class="col">
+                <input type="text" class="form-control" #refID="ngModel" ngModel      [ngModel]="empObj?.stuid"  required   name="stuid" placeholder="Student ID">
+                <div *ngIf="refID.invalid && refID.touched" class="alert alert-danger">
+                    <div *ngIf="refID.hasError('required')">
+                        This field is required
+                    </div>
+                 
+                </div>
+        </div>
+        <br>
+
+        <div class="formgroup">
+            <div class="col">
+                <input type="text" class="form-control"  #refname="ngModel" ngModel   [ngModel]="empObj?.stuname" required name="stuname" placeholder="Name">
+                <div *ngIf="refname.invalid && refname.touched" class="alert alert-danger">
+                    <div *ngIf="refname.hasError('required')">
+                        This field is required
+                    </div>
+                 
+                </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            </div>
+        </div>
+        <br>
+            
+            
+           
+            <h2>Subject</h2>
+
+
+            <div class="formgroup">
+                <div class="col">
+             
+             
+                    <input type="text" class="form-control"   [ngModel]="empObj?.evs" required  name="evs" placeholder="EVS">
+             
+             
+
+             
+             
+             
+                </div>  
+               </div>
+
+
+            <div class="formgroup">
+
+                <div class="col">
+                    <input type="text" class="form-control"  [ngModel]="empObj?.english" required  name="english" placeholder="Maths">
+                </div>
+            </div>
+    
+
+            <div class="formgroup">
+                <div class="col">
+                    <input type="text" class="form-control "  [ngModel]="empObj?.hindi" required  name="hindi" placeholder="Gk">
+                </div>
+            </div>
+      
+       
+            <div class="formgroup">
+                <div class="col">
+                    <input type="text" class="form-control"   [ngModel]="empObj?.maths" required   name="maths" placeholder="Hindi">
+                </div>
+            </div>
+      
+       
+
+            
+            <div class="formgroup">
+            <div class="col">
+                <input type="text" class="form-control"  [ngModel]="empObj?.gk" required  name="gk" placeholder="English">
+            </div>  </div>
+         
+       
+            <div class="formgroup">
+            <div class="col">
+                <input type="text" class="form-control"  [ngModel]="empObj?.science" required                  name="science" placeholder="Science">
+
+            </div> 
+            <br>
+        
+          
+        
+            <div class="formgroup">
+<button class="btn btn-outline-primary sm-2" style="width: 80px ;position:relative; left: 140px;"       [disabled]=frmData.invalid type="submit">Submit</button>
+
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+</div>
+</form>
+
+</div>

@@ -1,0 +1,83 @@
+
+<h3 class="pro">Progress Report</h3>
+
+<div class="card">
+  <div class="col-sm-8">
+    <input type="text" style="position: relative; " name="term" placeholder="Search" [(ngModel)]="term" >
+  
+   </div>
+   <br>
+    <table class="table ">
+
+       <thead class="thead">
+          <tr>
+            <th scope="col">Student ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">EVS</th>
+            <th scope="col">ENGLISH</th>
+            <th scope="col">HINDI</th>
+            <th scope="col">MATHS</th>
+            <th scope="col">G.K.</th>
+            <th scope="col">SCIENCE</th>
+            <th scope="col" >Action</th>
+
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          
+          
+          <tr *ngFor="let entry of entryList | filter:term | paginate: { itemsPerPage: 3, currentPage: p }  ">
+               
+            <td>{{entry.stuid}}</td>
+                <td>{{entry.stuname}}</td>
+                <td>{{entry.evs}}</td>
+                <td>{{entry.english}}</td>
+                <td>{{entry.hindi}}</td>
+                <td>{{entry.maths}}</td>
+                <td>{{entry.gk}}</td>
+                <td>{{entry.science}}</td>
+                <td><button type="button" class="btn btn-warning"    [routerLink]="['edit', entry._id]"    ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                  <button type="button" class="btn btn-success"  [routerLink]="['view', entry._id]" ><i class="fa fa-eye" aria-hidden="true"></i></button>
+                <button type="button" class="btn btn-danger" (click)="deleteData(entry._id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+            </tr>
+         
+        </tbody>
+      </table>
+      <pagination-controls style="float:right;" (pageChange)="p = $event"></pagination-controls>
+      <button type="button" class="btn btn-primary" routerLink="add" >Enter Marks</button>
+
+     
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

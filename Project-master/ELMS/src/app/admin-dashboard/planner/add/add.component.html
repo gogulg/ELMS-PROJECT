@@ -1,0 +1,104 @@
+<h2></h2>
+
+<div class="card" style="width: 25rem; padding: 23px;">
+<br>
+    <form #frmData="ngForm" (ngSubmit)="sendData(frmData.value)">
+     <div class="formgroup">
+         <div class="col">
+         <input type="text" class="form-control" #refID="ngModel" ngModel      [ngModel]="empObj?.id"  required   name="id" placeholder="ID">
+                <div *ngIf="refID.invalid && refID.touched" class="alert alert-danger">
+                    <div *ngIf="refID.hasError('required')">
+                        This field is required
+                    </div>
+                 
+                </div>
+        </div>
+        <br>
+         <div class="formgroup">
+            <div class="col">
+                <input type="text" class="form-control"  #refname="ngModel" ngModel   [ngModel]="empObj?.subname" required name="subname" placeholder="Subject">
+                <div *ngIf="refname.invalid && refname.touched" class="alert alert-danger">
+                    <div *ngIf="refname.hasError('required')">
+                        This field is required
+                    </div>
+                 
+                </div>
+           </div>
+        </div>
+        <br>
+        <div class="formgroup">
+            <div class="col">
+                <input type="text" class="form-control"  #refname="ngModel" ngModel   [ngModel]="empObj?.subcode" required name="subcode" placeholder="Subject code">
+                <div *ngIf="refname.invalid && refname.touched" class="alert alert-danger">
+                    <div *ngIf="refname.hasError('required')">
+                        This field is required
+                    </div>
+                 
+                </div>
+           </div>
+        </div>
+        <br>
+        <div class="formgroup">
+            <div class="col">
+                <input type="text" class="form-control"  #refname="ngModel" ngModel   [ngModel]="empObj?.date" required name="sdate" placeholder="Session Date">
+                <div *ngIf="refname.invalid && refname.touched" class="alert alert-danger">
+                    <div *ngIf="refname.hasError('required')">
+                        This field is required
+                    </div>
+                 
+                </div>
+           </div>
+        </div>
+        <br>
+        <div class="formgroup">
+            <div class="col">
+                <input type="text" class="form-control"  #refname="ngModel" ngModel   [ngModel]="empObj?.stime" required name="stime" placeholder="Session Time">
+                <div *ngIf="refname.invalid && refname.touched" class="alert alert-danger">
+                    <div *ngIf="refname.hasError('required')">
+                        This field is required
+                    </div>
+                 
+                </div>
+           </div>
+        </div>
+        <br>
+        <div class="formgroup">
+            <div class="col">
+                <input type="text" class="form-control"  #refname="ngModel" ngModel   [ngModel]="empObj?.sduration" required name="sduration" placeholder="Session Duration">
+                <div *ngIf="refname.invalid && refname.touched" class="alert alert-danger">
+                    <div *ngIf="refname.hasError('required')">
+                        This field is required
+                    </div>
+                 
+                </div>
+           </div>
+        </div>
+        <br>
+      
+          
+        
+            <div class="formgroup">
+<button class="btn btn-outline-primary sm-2" style="width: 80px ;position:relative; left: 140px;"       [disabled]=frmData.invalid type="submit">Submit</button>
+
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
